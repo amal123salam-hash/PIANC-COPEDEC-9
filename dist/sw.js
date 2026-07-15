@@ -1,4 +1,4 @@
-const CACHE_NAME = 'copedec-xi-v1';
+const CACHE_NAME = 'copedec-9-v1';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
