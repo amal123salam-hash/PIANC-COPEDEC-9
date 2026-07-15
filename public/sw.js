@@ -1,8 +1,10 @@
 const CACHE_NAME = 'copedec-9-v1';
+// Must match the repo's GitHub Pages base path (see vite.config.ts `base`).
+const BASE = '/PIANC-COPEDEC-9';
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
+  `${BASE}/`,
+  `${BASE}/index.html`,
+  `${BASE}/manifest.json`,
 ];
 
 // Install: cache static assets
@@ -63,7 +65,7 @@ self.addEventListener('fetch', (event) => {
         .catch(() => {
           // Fallback to index.html for navigation requests (SPA routing)
           if (request.mode === 'navigate') {
-            return caches.match('/index.html');
+            return caches.match(`${BASE}/index.html`);
           }
         });
     })
